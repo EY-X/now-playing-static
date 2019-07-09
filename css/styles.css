@@ -15,11 +15,6 @@ html {
 
 body {
   margin: 0;
-
-  /*
-    We need to add some padding to the bottom of the body on mobile so that
-     the footer won't get covered by our navigation
-  */
   padding-bottom: 60px;
 }
 
@@ -195,3 +190,126 @@ figure {
 .about > p {
   margin: 0;
 }
+
+@media only screen and (min-width: 768px) {
+  .site-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 6%;
+  }
+  .site-nav-list, .site-nav-item {
+    display: block;
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-left: 8px;
+    }
+  .site-nav-list:first-child {
+    margin-top: 70px;
+  }
+  .site-logo {
+    z-index: 101;
+    width: 1.25em;
+    position: absolute;
+    margin-left: -6px;
+    text-align: center;
+  }
+  body {
+    margin-left: 80px;
+    
+  }
+  .movie-overview {
+    display: list-item;
+  }
+  .site-footer {
+    background-color: black;
+    color: white;
+    }
+  .footer-nav {
+    display: flex;
+    position: relative;
+    top: 60px;
+    right: -50px;
+
+
+  }
+  .footer-nav-list {
+    
+  }
+  .about {
+    display: inline-block;
+    margin-right: -400px;
+    margin-bottom: 60px;
+  }
+
+
+}
+@media only screen and (min-width: 992px) {
+  /*  */
+
+  .site-logo {
+    z-index: 101;
+    width: 1.5em;
+    position: fixed;
+    left: 15px;
+    top: 10px;
+    text-align: center;
+
+}
+.site-nav-list, .site-nav-item {
+  display: block;
+  float: none;
+  width: 100%;
+  margin: 40px auto;
+  
+  }
+
+  .movie-overview:first-child {
+    display: list-item;
+  }
+  .movie-overview:nth-child(n+2) {
+    display: none;
+  }
+  .movie .movie-poster {
+    display: list-item;
+  }
+  .movie .first-poster {
+    display: none;
+
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+ .movie:first-child {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    
+
+  }
+}
+@media only screen and (min-width: 1270px) {
+  main .movie {
+    margin: 0 auto;
+  }
+}
+
+
+  /* .site-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 6%;
+  }
+  .movie .movie-poster:nth-child(n+2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
+  .movie-overview:first-child {
+    display: list-item;
+  }
+  .movie-overview:nth-child(n+2) {
+    display: none; */
+
